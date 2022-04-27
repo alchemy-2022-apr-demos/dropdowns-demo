@@ -9,3 +9,8 @@
     width: 100px;
     background-image: url('../assets/aquarius.png');
 }
+
+#catchphrase-section {
+    display: flex;
+    flex-direction: row;
+}

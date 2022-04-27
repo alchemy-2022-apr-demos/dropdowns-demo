@@ -7,8 +7,13 @@ const animalDiv = document.getElementById('animal');
 const zodiacDiv = document.getElementById('zodiac');
 const countElem = document.getElementById('count');
 
+const catchphraseElem = document.getElementById('catchphrase');
+const button = document.getElementById('save-button');
+
 let animalCount = 0;
 let zodiacCount = 0;
+
+let catchphrases = [];
 
 // listening for any changes to the select menu
 selectElem.addEventListener('change', () => {
@@ -29,4 +34,17 @@ zodiacSelect.addEventListener('change', () => {
 
 function displayStats() {
     countElem.textContent = `You have changed the animal ${animalCount} times and the zodiac ${zodiacCount} times.`;
+}
+
+button.addEventListener('click', () => {
+    catchphrases.push(catchphraseElem.value);
+    console.log(catchphrases);
+    displayCatchPhrases();
+});
+
+function displayCatchPhrases() {
+    // clear out the existing catchphrases
+    // loop through each catchphrase
+    // create an element with the catchphrase as textContent
+    // append the new element to the page
 }
