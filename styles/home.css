@@ -1,1 +1,11 @@
-/* add home page styles here */
+#animal {
+    height: 100px;
+    width: 100px;
+    background-image: url('../assets/camel.png');
+}
+
+#zodiac {
+    height: 100px;
+    width: 100px;
+    background-image: url('../assets/aquarius.png');
+}
