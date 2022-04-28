@@ -27,7 +27,7 @@ selectElem.addEventListener('change', () => {
 
 zodiacSelect.addEventListener('change', () => {
     console.log('changing zodiac', zodiacSelect.value);
-    zodiacDiv.style.backgroundImage = `url('./assets/${zodiacSelect.value}.png')`;
+    zodiacDiv.style.backgroundImage = `url('./assets/${zodiacSelect.value}-sign.png')`;
     zodiacCount++;
     displayStats();
 });
@@ -43,8 +43,16 @@ button.addEventListener('click', () => {
 });
 
 function displayCatchPhrases() {
+    const catchphraseList = document.getElementById('catchphrase-list');
     // clear out the existing catchphrases
+    catchphraseList.textContent = '';
+
     // loop through each catchphrase
-    // create an element with the catchphrase as textContent
-    // append the new element to the page
+    for (let phrase of catchphrases) {
+        // create an element with the catchphrase as textContent
+        const banana = document.createElement('li');
+        banana.textContent = phrase;
+        // append the new element to the page
+        catchphraseList.append(banana);
+    }
 }
